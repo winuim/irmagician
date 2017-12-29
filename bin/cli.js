@@ -57,7 +57,18 @@ case "info":
     break
 case "showPorts":
     require("./node_modules/serialport/bin/serialport-list.js")
-
+    break
+case "version":
+    irMagician.version()
+    break
+case "reset":
+    irMagician.reset()
+    break
+case "led":
+    irMagician.led(cli.input[1])
+    break
+case "freq":
+    irMagician.freq(cli.input[1])
     break
 default:
     cli.showHelp()
